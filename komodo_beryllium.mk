@@ -5,21 +5,18 @@
 #
 
 $(call inherit-product, device/xiaomi/beryllium/device.mk)
-$(call inherit-product, vendor/xiaomi/firmware/beryllium/firmware.mk)
 
 # Inherit some common stuff.
-$(call inherit-product, vendor/ancient/config/common_full_phone.mk)
+$(call inherit-product, vendor/komodo/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_INCLUDE_WIFI_EXT := true
 
-# Ancient
-ANCIENT_OFFICIAL := true
-# ANCIENT_NOGAPPS := true
-# FORCE_OTA := false
+# komodo
 TARGET_GAPPS_ARCH :=arm64
+KOMODO_VARIANT ?= BETA
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := ancient_beryllium
+PRODUCT_NAME := komodo_beryllium
 PRODUCT_DEVICE := beryllium
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := POCOPHONE F1
