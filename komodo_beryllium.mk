@@ -10,7 +10,7 @@ $(call inherit-product, device/xiaomi/beryllium/device.mk)
 $(call inherit-product, vendor/komodo/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_INCLUDE_WIFI_EXT := true
-CURRENT_BUILD_TYPE := nogapps
+CURRENT_BUILD_TYPE ?= nogapps
 KOMODO_VARIANT ?= BETA
 
 # Device identifier. This must come after all inclusions.
